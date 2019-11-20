@@ -1,16 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GraphicsComponent } from './components/graphics/graphics.component';
+import { FormCallsComponent } from './components/form-calls/form-calls.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GraphicsComponent,
+    FormCallsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

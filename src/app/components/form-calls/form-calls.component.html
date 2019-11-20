@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row text-center pb-5">
+        <div class="col-sm">
+            <a class="btn btn-dark" [routerLink]="''" role="button">Visualizar graficas</a>
+        </div>
+    </div>
+    <div class="alert alert-success" role="alert" *ngIf="saved">
+        Llamada guardada exitosamente!
+    </div>
+    <p><b>Agrega una llamada con el siguiente JSON</b></p>
+    <p>* Los topics (temas) id's son:</p>
+    <ul>
+        <li>1: Soporte tecnico</li>
+        <li>2: Seguimiento</li>
+        <li>3: Satisfaccion</li>
+        <li>4: Confirmacion de entrega</li>
+        <li>5: Encuesta</li>
+    </ul>
+    <p>* La duración de la llamada es en segundos</p>
+    <textarea name="" [(ngModel)]="textedJson" cols="10" rows="10"></textarea>
+    <div class="row text-center pb-5">
+        <div class="col-sm">
+            <button class="btn btn-primary" (click)="saveCall()">Guardar</button>
+        </div>
+    </div>
+</div>

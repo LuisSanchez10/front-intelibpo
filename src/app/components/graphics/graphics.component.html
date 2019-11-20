@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row text-center pb-5">
+        <div class="col-sm">
+            <a class="btn btn-dark"[routerLink]="'/add-call'" role="button">Agregar nueva llamada</a>
+        </div>
+    </div>
+    <div class="row text-center pb-5">
+        <div class="col-sm">
+            <div class="form-group row">
+              <label for="date-input-init" class="col-2 col-form-label">Inicio</label>
+              <div class="col-10">
+                <input class="form-control" type="date" [(ngModel)]="fecha_init" (change)="setdate()" id="date-input-init">
+              </div>
+            </div>
+        </div> 
+        <div class="col-sm">
+            <div class="form-group row">
+              <label for="date-input-fin" class="col-2 col-form-label">Final</label>
+              <div class="col-10">
+                <input class="form-control" type="date" [(ngModel)]="fecha_fin" (change)="setdate()" id="date-input-fin">
+              </div>
+            </div>
+        </div> 
+    </div> 
+
+    <div class="row text-center">
+      <div class="col-sm">
+        Diagrama de barras
+        <div class="chart-container">    
+          <canvas id="canvas"></canvas>    
+        </div>  
+      </div>
+      <div class="col-sm">
+        Diagrama de torta
+        <div class="chart-container">    
+          <canvas id="canvas-char"></canvas>    
+        </div>  
+      </div>
+    </div>
+</div>
